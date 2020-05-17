@@ -1,0 +1,154 @@
+*{
+    font-family: Roboto, raleway;
+ }
+
+body
+{
+    background-color: gray;
+     padding-top: 50px;
+}
+
+#myNav
+{
+    background-color: cornflowerblue;
+    padding: 15px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+    left:0px;
+}
+
+.myText
+{
+    color: darkorange;
+    font-size: 35px;
+    font-family:"Courier New", monospace ;
+    text-align: center;
+    margin: 10px;
+}
+
+#mainContainer
+{
+    width: 90%;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+#card1
+{
+    border-style: solid;
+    border-color: cornflowerblue;
+    border-width: 4px;
+    border-radius: 40px;
+    width: 400px;
+    height: 250px;
+    background-color: darkorange;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px forestgreen;
+    text-align: center;
+    overflow: hidden;
+}
+
+#card2
+{
+    border-style: solid;
+    border-color: cornflowerblue;
+    border-width: 4px;
+    border-radius: 40px;
+    width: 400px;
+    height: 250px;
+    background-color: darkorange;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px goldenrod;
+    text-align: center;
+    overflow: hidden;
+}
+
+#card3
+{
+    border-style: solid;
+    border-color: cornflowerblue;
+    border-width: 4px;
+    border-radius: 40px;
+    width: 400px;
+    height: 250px;
+    background-color: darkorange;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px darkviolet;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cardimage
+{
+    float:left;
+    width: 40%;
+    height: 100%;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: 10px double grey;    
+}
+
+span
+{
+    flex:60%;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    padding: 3px;
+}
+
+p
+{
+    flex:60%;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    padding: 3px;
+}
+
+.link 
+{
+  flex:60%;
+  font-size: 20px;
+  font: bold;
+  color: cornflowerblue;
+  font-family: "Open Sans", sans-serif;
+}
+
+.group:after
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+a:hover
+{
+    color: white;
+}

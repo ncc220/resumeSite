@@ -1,0 +1,251 @@
+<!--
+Name: Nic Chiolerio
+Pawprint: nccdn6
+Date: 2-5-20
+Challenge 3: Multi-Column Layout 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Skills page</title>
+        <meta charset="utf-8">
+        <style>
+            body
+            {
+                padding-top:100px;
+                background-color: slategray;
+            }
+            * {
+                font-family: roboto, raleway;
+            }
+            
+            .myText
+            {
+                color: white;
+                font-size: 35px;
+                font-family:"Courier New", monospace ;
+                text-align: center;
+                margin: 10px;
+            }
+            
+            #mainWrapper
+            {
+                text-align: center;
+                width: 1101px;
+                border: 6px solid cornflowerblue;
+                border-radius: 80px;
+                padding: 8px;
+                margin: 50px auto;
+                background-color: darkorange;
+            }
+            
+            #left
+            {
+                float: left;
+                height: 390px;
+                width:241px;
+                border: 8px solid cornflowerblue;
+                border-radius: 50px;
+                padding: 20px;
+                margin: 20px;
+                background-color: slategray;
+            }
+            
+            #rowWrapper
+            {
+                float: left;
+                height:390px;
+                width: 428px;
+                margin: 20px;
+            }
+            
+            #right
+            {
+                float: left;
+                height: 390px;
+                width:200px;
+                border: 8px solid cornflowerblue;
+                border-radius: 50px;
+                padding: 20px;
+                margin: 20px;
+                background-color: slategray;
+            }
+            
+            h2
+            {
+                text-align: center;
+                border-bottom: 2px solid cornflowerblue;
+            }
+            
+            h3
+            {
+                text-align: center;
+                border-bottom: 2px solid cornflowerblue;
+            }
+            
+            pre
+            {
+                color: white;
+                font-size: 18px; 
+            }
+            
+            p
+            {
+                color: white;
+                font-size: 18px;    
+            }
+            
+            
+            #top
+            {
+                width: 372px;
+                height: 190px;
+                padding: 20px;
+                border: 8px solid cornflowerblue;
+                border-radius: 50px;
+                margin-bottom: 20px;
+                background-color: slategray;
+            }
+            
+            #bottom
+            {
+                width: 372px;
+                height: 120px;
+                padding: 20px;
+                border: 8px solid cornflowerblue;
+                border-radius: 50px;
+                background-color: slategray;
+            }
+            
+            #myNav
+            {
+                background-color: cornflowerblue;
+                padding: 15px;
+                position: fixed;
+                color: darkorange;
+                top: 0px;
+                width: 100%;
+                z-index: 9999;
+                left:0px;
+            }
+            .hrText
+            {
+                color: darkorange;
+                font-size: 35px;
+                font-family:"Courier New", monospace ;
+                text-align: center;
+                margin: 10px;
+            }
+            
+            .hText
+            {
+                text-align: center;
+                font-family:"Courier New", monospace;
+                font-size: 24px;
+                color: white;
+            }
+            
+            .group:after
+            {
+                content: "";
+                clear: both;
+                display: table;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <nav id ="myNav">
+            <p class ="hrText"> <a href="Nccdn6portfolio.html">Nic Chiolerio</a> Skills <a href ="Nccdn6TablesS20.html"> Classes taken</a> <a href ="Nccdn6ProjectsS20.html"> Projects</a></p>
+        </nav>
+        <!-- Main wrapper. This div should wrap all columns, row wrapper, and title header 
+
+        physical width of wrapper =
+            1101px -> content width
+        +     16px -> padding (8 left, 8 right)
+        +     12px -> border  (6 left, 6 right)
+        +   autopx -> side margins are set to auto
+        =
+            1129px for the wrapper + margins
+
+
+-->
+        <div id="mainWrapper" class="group">
+            <h2 class ="myText">
+                Skills
+            </h2>
+            
+            <!-- Left Column -->
+            <!-- Put left column physical width calculations here: 
+            
+            left width = 
+                241px -> content
+            +    40px -> padding (20 left, 20 right)
+            +    16px -> border  (8 left, 8 right)
+            +    40px -> margin  (20 left, 20 right)
+            =
+                337px for the left column
+
+            -->
+            <div id="left"> 
+            <h3 class = "hText">Languages</h3>
+            <pre>C / C#
+Java
+HTML
+Python</pre>
+            </div>
+            <!-- Row Wrapper. This div will contain two rows -->
+            <!--Put middle column physical width calculations here:
+
+            middle width = 
+                428px -> content
+            +    40px -> margin  (20 left, 20 right)
+            =
+                468px for the middle column
+
+            -->
+            <!--<div id="middle">-->
+                <div id="rowWrapper">
+                
+                    <div id="top">
+                        <h3 class = "hText">Coursework</h3>
+                        
+                        <pre>CS1050, CS2050, CS2830, CS3050,
+CS 3280, CS 3330, CS3380,
+CS 4320, INFOTC 4400</pre>
+                        
+                    </div>
+                    
+                    <div id="bottom">
+                        <h3 class = "hText">Other</h3>
+                        <p>Honors student</p>                      
+                    </div>
+                
+                </div>
+            
+            <!--</div>-->
+            
+            <!-- Right Column -->
+            <!--Put right column physical width calculations here: 
+
+            right width = 
+            1101 - 337 - 468 - 40 - 16 - 40 = 200 content width
+
+                200px -> content
+            +    40px -> padding (20 left, 20 right)
+            +    16px -> border  (8 left, 8 right)
+            +    40px -> margin  (20 left, 20 right)
+            =
+                296px for the right column
+
+            -->
+            <div id="right">
+                <h3 class = "hText">Technologies</h3>
+                <p>Git, SQL</p>
+            </div>
+        </div>
+        <p>Last updated at: 2-8-20</p>
+    </body>
+</html>

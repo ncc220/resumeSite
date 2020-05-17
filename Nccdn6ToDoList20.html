@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- 
+Name: Nic Chiolerio
+Pawprint: nccdn6
+date:2-24-20
+challenge: to do list S20
+-->
+<html lang="en">
+    <head>
+        <title> To do list </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="nccdn6Style.css">
+        <style>
+            h1
+            {
+                text-align: center;
+            }
+            
+            #theme
+            {
+                margin: 10px;
+                height: 30px;
+                width:100px;
+                
+            }
+            #link 
+            {
+                margin: 10px;
+                font-size: 20px;
+                color: darkorange;
+            }   
+            
+            .formBtn
+            {
+                height: 25px;
+                width:80px;
+                margin-top: 10px;
+                margin-right: 25px;
+                margin-left: 15px;
+            }
+            
+            #error
+            {
+                display: none;
+                color: red;
+            }
+            
+            #list
+            {
+                position: relative;
+                margin-top: 100px;
+                background-color: darkorange;
+                width: 100%;
+                margin-bottom:50px;
+                
+            }
+            
+            .myList
+            {
+                border: 1px solid cornflowerblue;
+                border-collapse: collapse;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+            
+            td
+            {
+                border: 1px solid cornflowerblue;
+                border-collapse: collapse;
+                color: white;
+                text-align: center;
+                font-size:18px;
+            }
+            
+            #formDiv
+            {
+                margin-top: 40px;
+                display: inline-block;
+                text-align: center;
+                width:100%;
+            }
+            
+            #form1
+            {
+                border: 2px solid cornflowerblue;
+                border-radius: 15px;
+                display: inline-block;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                color: white;
+                background-color: darkorange;
+                padding: 10px;
+            }
+            
+            #form2
+            {
+                border: 2px solid black;
+                border-radius: 15px;
+                display: inline-block;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                color: black;
+                background-color: lightgray;
+                padding: 10px;
+            }
+            
+            #form3
+            {
+                border: 2px solid white;
+                border-radius: 15px;
+                display: inline-block;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                color: white;
+                background-color: darkgray;
+                padding: 10px;
+            }
+            
+            legend
+            {
+                justify-content: center;
+            }
+            
+            input
+            {
+                margin-right: 30px
+            }
+            
+            select
+            {
+                margin-right: 30px
+            }
+            
+        </style>
+        
+        <!-- 
+ action.onclick = function() {
+         
+            }
+-->
+        <script>
+        
+        var count = 0;
+        var tableLength = 1;
+        
+            
+        function editHeader() {
+            var newHdr = prompt("New list title:", "My To-Do list");
+            
+            if (newHdr != null) {
+                document.getElementById("header").innerHTML = newHdr;
+            }
+            
+        }
+            
+        function changeTheme() {
+            
+            var table = document.getElementsByClassName("myList");
+            var cells = document.getElementsByTagName("td");
+            
+            
+            if(count == 0) {
+                document.getElementById("form1").id = "form2";
+                document.getElementById("header").style.color = "black";
+                document.getElementById("formLegend").style.color = "black";
+                document.body.style.backgroundColor = "white";
+                document.getElementById("list").style.backgroundColor = "lightgray";
+                document.getElementById("theme").innerHTML = "light theme";
+                document.getElementById("link").style.color = "black";
+                
+                for(count = 0; count < table.length; count++) {
+                    table[count].style.borderColor = "black";
+                    table[count].style.color = "black";
+                    }
+                
+                if(cells != null)
+                    {
+                        for(count = 0; count < cells.length; count++) {
+                            cells[count].style.borderColor = "black";
+                            cells[count].style.color = "black";
+                        }
+                    }
+                
+                count = 1;
+                return;
+                }
+            if(count == 1) {
+                document.getElementById("form2").id = "form3";
+                document.getElementById("header").style.color = "white";
+                document.getElementById("formLegend").style.color = "white";
+                document.body.style.backgroundColor = "black";
+                document.getElementById("list").style.backgroundColor = "darkgray";
+                document.getElementById("theme").innerHTML = "dark theme";
+                document.getElementById("link").style.color = "white";
+                
+                for(count = 0; count < table.length; count++) {
+                    table[count].style.borderColor = "white";
+                    table[count].style.color = "white";
+                    }
+                
+                if(cells != null)
+                    {
+                        for(count = 0; count < cells.length; count++) {
+                            cells[count].style.borderColor = "white";
+                            cells[count].style.color = "white";
+                        }
+                    }
+                
+                count = 2;
+                return;
+                }
+            if(count == 2) {
+                document.getElementById("form3").id = "form1";
+                document.getElementById("header").style.color = "darkorange";
+                document.getElementById("formLegend").style.color = "darkorange";
+                document.body.style.backgroundColor = "grey";
+                document.getElementById("list").style.backgroundColor = "darkorange";
+                document.getElementById("theme").innerHTML = "default theme";
+                document.getElementById("link").style.color = "darkorange";
+                
+                for(count = 0; count < table.length; count++) {
+                    table[count].style.borderColor = "cornflowerblue";
+                    table[count].style.color = "white";
+                    }
+                
+                if(cells != null)
+                    {
+                        for(count = 0; count < cells.length; count++) {
+                            cells[count].style.borderColor = "cornflowerblue";
+                            cells[count].style.color = "white";
+                        }
+                    }
+                
+                count = 0;
+                return;
+                }
+            
+            }
+
+        function updateList() {
+            
+            var formTitle = document.getElementById("title").value;
+            var formType = document.getElementById("type").value;
+            var formDate = document.getElementById("date").value;
+            
+            if (formTitle.length == 0 || formType == "" ||  formDate == "") {
+                document.getElementById("error").style.display = "block";
+                return;
+                }
+            else {
+                document.getElementById("error").style.display = "none";
+            }
+            
+            var table = document.getElementById("list");
+            var row = table.insertRow(tableLength);
+            var title = row.insertCell(0);
+            var type = row.insertCell(1);
+            var date = row.insertCell(2);
+            var action = row.insertCell(3);
+            tableLength++;
+            
+            title.innerHTML = formTitle;
+            type.innerHTML = formType;
+            date.innerHTML = formDate;
+            action.innerHTML = "Click to complete!";
+            
+            action.addEventListener("click", function() {
+                document.getElementById("list").deleteRow(action.parentNode.rowIndex);
+                tableLength--;
+            }, false);
+            
+           
+        }
+            
+        
+        
+        </script>
+        
+    </head>
+    <body>
+        <div id = "top">
+        <a href ="Nccdn6projectsS20.html" id = "link"> Projects</a>
+        </div>
+        <button type="button" id = "theme" onclick="changeTheme()">Change theme</button>
+        <h1 class = "myText" id = "header" ondblclick="editHeader()">My To-Do list</h1>
+        
+        <div>
+        <table id="list" class="myList">
+            <thead class="myList">
+                <tr>
+                    <th class="myList">Title</th>
+                    <th class="myList">Type</th>
+                    <th class="myList">Date</th>
+                    <th class="myList">Action</th>
+                </tr>
+            <tbody class="myList">
+               
+            </tbody>
+        </table>
+        </div>
+        
+        <div id = "formDiv">
+            <h3 class = "myText" id = "formLegend">Add to list:</h3>
+            <form action = '#' method ="post" id = "form1">
+                
+                
+                <div id = "error"><p>All fields required</p></div>
+                
+                <div>
+                    <input type="text" name="title" placeholder="Title" id = "title">
+                    
+                    <select name = "types" id = "type">
+                        <option value="">Select an activity</option>
+                        <option value="Homework">Homework</option>
+                        <option value="Project">Project</option>
+                        <option value="Exam">Exam</option>
+                        <option value="Quiz">Quiz</option>
+                        <option value="University">University task</option>
+                        <option value="Household">Household chore</option>
+                    </select>
+                    
+                    <input type="date" name="deadline" id = "date">
+                    
+                    
+                </div>
+                
+                <div>
+                    <button type="reset" class = "formBtn">Reset</button>
+                    <button type="button" onclick = "updateList()" class = "formBtn">Add to list</button>
+                </div>
+            
+            </form>
+        </div>
+        
+    </body>
+</html>
